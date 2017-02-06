@@ -119,5 +119,13 @@ public class Product extends Model {
         this.categories = categories;
     }
 
+    public List<Long> getCatSelect() {
+        return catSelect;
+    }
+
+    public void setCatSelect(List<Long> catSelect) {
+        this.catSelect = catSelect;
+    }
+
 
 }

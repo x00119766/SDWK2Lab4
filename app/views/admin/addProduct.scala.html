@@ -18,16 +18,12 @@
 		@inputText(addProductForm("name"), '_label -> "Name",'class -> "form-control")
 		@inputText(addProductForm("description"), '_label -> "Description",'class -> "form-control")
 
-         @for((value, name) <- Category.options()){
-			 <input type="checkbox" name="catSelect[]" value= "@value"
-			 @if(addProductForm("id").value() != null) {
-				 @if(Category.inCategory(value.toLong, addProductForm("id").value().toLong))
-				 {
-				  checked
-				 }
-			 }
-			 />@name<br>
-		 }
+   
+
+                 @for((value, name) <- Category.options) {
+            <input type="checkbox" name="catSelect[]" value="@value" />@name<br>        
+        }
+
 
 		@inputText(addProductForm("stock"), '_label -> "Stock",'class -> "form-control")
 		@inputText(addProductForm("price"), '_label -> "Price",'class -> "form-control")
